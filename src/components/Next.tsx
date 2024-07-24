@@ -94,7 +94,12 @@ const Next: React.FC<NextProps> = ({ title, id }) => {
                 onMouseLeave={() => setHoveredId(null)}
               >
                 <main key={movie.id}>
-                  <img src={movie.thumbnail_vertical} alt="" />
+                  <img
+                    src={movie.thumbnail_vertical}
+                    alt=""
+                    onMouseEnter={() => setHoveredId(movie.id)}
+                    onMouseLeave={() => setHoveredId(null)}
+                  />
                   {hoveredId === movie.id && (
                     <article>
                       <aside>
