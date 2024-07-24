@@ -97,8 +97,11 @@ const Next: React.FC<NextProps> = ({ title, id }) => {
                   <img
                     src={movie.thumbnail_vertical}
                     alt=""
-                    onMouseEnter={() => setHoveredId(movie.id)}
-                    onMouseLeave={() => setHoveredId(null)}
+                    onClick={
+                      !isDesktop
+                        ? () => setHoveredId(movie.id)
+                        : () => setHoveredId(null)
+                    }
                   />
                   {hoveredId === movie.id && (
                     <article>
