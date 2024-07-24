@@ -1626,9 +1626,9 @@
   .next {
     margin: 0;
     padding: 0;
-    height: 50vh;
+    height: 80vh;
     /* background: red; */
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
   .next h3 {
     font-size: 18px;
@@ -1726,7 +1726,7 @@
     display: flex;
     /* background: hotpink; */
     justify-content: space-between;
-    margin-top: 4%;
+    margin-top: 2%;
   }
   .slide main article {
     margin: 0;
@@ -1759,7 +1759,7 @@
 
     /* background: #000; */
     margin-left: 2%;
-    margin-top: 1%;
+    margin-top: 0;
   }
   .previewTitle {
     font-size: 18px;
@@ -1783,7 +1783,7 @@
     font-family: "Zain", sans-serif;
     font-size: 14px;
     font-weight: 400;
-    margin-top: 2%;
+    margin-top: 0;
     margin-bottom: 1%;
     color: #f0f0f0;
   }
