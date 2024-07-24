@@ -90,7 +90,7 @@
   fill: #f0f0f0;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
   .navOpen {
     margin: 0;
     padding: 0;
@@ -128,6 +128,7 @@
     margin-left: auto;
     margin-right: auto;
   }
+
   .hero p {
     width: 80%;
     text-align: center;
@@ -140,6 +141,51 @@
     width: 35%;
     margin-top: 0;
     margin-bottom: 0;
+    /* margin-bottom: 10%; */
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+  .hero h1 {
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    /* background: goldenrod; */
+    font-family: "Audiowide", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12%;
+    color: rgb(230, 42, 42);
+  }
+  .hero h4 {
+    background: black;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .hero h4 span {
+    font-family: "Zain", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #f0f0f0;
+  }
+  .hero p {
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+  }
+  .hero button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
     /* margin-bottom: 10%; */
   }
 }

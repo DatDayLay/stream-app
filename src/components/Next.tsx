@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import {
   Keyboard,
   Pagination,
@@ -29,6 +29,18 @@ const Next: React.FC<NextProps> = ({ title, id }) => {
   const handleClick = (id: number | null) => {
     setClickedId(id);
   };
+  useEffect(() => {
+    if (clickedId !== null) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [clickedId]);
+
   return (
     <div className={styles.next}>
       <h3>
@@ -97,11 +109,7 @@ const Next: React.FC<NextProps> = ({ title, id }) => {
                   <img
                     src={movie.thumbnail_vertical}
                     alt=""
-                    onClick={
-                      !isDesktop
-                        ? () => setHoveredId(movie.id)
-                        : () => setHoveredId(null)
-                    }
+                    onClick={() => setHoveredId(movie.id)}
                   />
                   {hoveredId === movie.id && (
                     <article>
